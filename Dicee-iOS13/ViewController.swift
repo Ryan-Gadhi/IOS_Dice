@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var buttonOnView: UIButton!
     @IBOutlet weak var dice_1: UIImageView!
     
     @IBOutlet weak var dice_2: UIImageView!
@@ -19,9 +20,12 @@ class ViewController: UIViewController {
         // the user has not yet clicked the button
         dice_1.alpha = 0.5
         dice_2.alpha = 0.5
+        buttonOnView.layer.cornerRadius = 10
     }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
+        
+        //#imageLiteral(resourceName: "DiceOne")
         
        let dices = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),
                 #imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")]
